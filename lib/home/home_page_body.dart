@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planets/home/PlanetRow.dart';
+import 'package:planets/home/planet_row.dart';
 import 'package:planets/model/planets.dart';
 
 class HomePageBody extends StatelessWidget {

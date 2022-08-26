@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planets/detail/DetailPage.dart';
+import 'package:planets/common/text_style.dart';
+import 'package:planets/detail/detail_page.dart';
 import 'package:planets/model/planets.dart';
 
 class PlanetRow extends StatelessWidget {
@@ -24,12 +25,13 @@ class PlanetRow extends StatelessWidget {
     ),
   );
 
-  late final baseTextStyle = const TextStyle(fontFamily: 'Poppins');
+  late final headerTextStyle = Style.baseTextStyle.copyWith(
+    color: Colors.white,
+    fontSize: 18.0,
+    fontWeight: FontWeight.w600,
+  );
 
-  late final headerTextStyle = baseTextStyle.copyWith(
-      color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w600);
-
-  late final regularTextStyle = baseTextStyle.copyWith(
+  late final regularTextStyle = Style.baseTextStyle.copyWith(
     color: const Color(0xffb6b2df),
     fontSize: 7.0, // fontSize: 9.0,
     fontWeight: FontWeight.w400,
