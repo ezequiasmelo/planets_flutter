@@ -16,6 +16,20 @@ class DetailPage extends StatelessWidget {
         planet.picture,
         fit: BoxFit.cover,
         height: 300.0,
+        loadingBuilder: (BuildContext context, Widget child,
+            ImageChunkEvent? loadingProgress) {
+          if (loadingProgress == null) {
+            return child;
+          }
+          return Center(
+            child: Align(
+              alignment: Alignment(0.0, -0.7),
+              child: CircularProgressIndicator(),
+            ),
+          );
+        },
+        errorBuilder: (context, error, stackTrace) =>
+            const Text('Some errors occurred!'),
       ),
     );
   }

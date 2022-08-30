@@ -17,3 +17,10 @@ samples, guidance on mobile development, and a full API reference.
 
 
 https://github.com/sergiandreplace/flutter_planets_tutorial
+
+
+flutter packages get
+
+flutter build apk
+
+error lens
