@@ -7,7 +7,18 @@ import 'package:planets/common/text_style.dart';
 class DetailPage extends StatelessWidget {
   final Planet planet;
 
-  DetailPage(this.planet);
+  const DetailPage(this.planet, {Key? key}) : super(key: key);
+
+  Container _getImageNotFound() {
+    return Container(
+      constraints: BoxConstraints.expand(height: 300.0),
+      child: Image.asset(
+        "assets/img/space.png",
+        fit: BoxFit.cover,
+        height: 300.0,
+      ),
+    );
+  }
 
   Container _getBackground() {
     return Container(
@@ -28,8 +39,7 @@ class DetailPage extends StatelessWidget {
             ),
           );
         },
-        errorBuilder: (context, error, stackTrace) =>
-            const Text('Some errors occurred!'),
+        errorBuilder: (context, error, stackTrace) => _getImageNotFound(),
       ),
     );
   }
@@ -50,7 +60,7 @@ class DetailPage extends StatelessWidget {
   }
 
   Widget _getContent() {
-    final _overviewTitle = "Overview".toUpperCase();
+    final overviewTitle = "Overview".toUpperCase();
     return ListView(
       padding: EdgeInsets.fromLTRB(0.0, 72.0, 0.0, 32.0),
       children: [
@@ -64,7 +74,7 @@ class DetailPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                _overviewTitle,
+                overviewTitle,
                 style: Style.headerTextStyle,
               ),
               Separator(),
