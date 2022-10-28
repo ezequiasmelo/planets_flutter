@@ -8,13 +8,6 @@ class HomePageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      // child: ListView.builder(
-      //   itemBuilder: (context, index) => PlanetRow(planets[index]),
-      //   itemCount: planets.length,
-      //   padding: EdgeInsets.symmetric(
-      //     vertical: 16.0,
-      //   ),
-      // ),
       child: Container(
         color: Color(0xFF736AB7),
         child: CustomScrollView(

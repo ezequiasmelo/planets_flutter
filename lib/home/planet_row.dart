@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:planets/common/text_style.dart';
 import 'package:planets/detail/detail_page.dart';

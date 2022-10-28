@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:planets/common/plannet_summary.dart';
 import 'package:planets/common/separator.dart';
@@ -23,15 +24,11 @@ class DetailPage extends StatelessWidget {
   Container _getBackground() {
     return Container(
       constraints: BoxConstraints.expand(height: 300.0),
-      child: Image.network(
-        planet.picture,
+      child: CachedNetworkImage(
+        imageUrl: planet.picture,
         fit: BoxFit.cover,
         height: 300.0,
-        loadingBuilder: (BuildContext context, Widget child,
-            ImageChunkEvent? loadingProgress) {
-          if (loadingProgress == null) {
-            return child;
-          }
+        progressIndicatorBuilder: (context, url, progress) {
           return Center(
             child: Align(
               alignment: Alignment(0.0, -0.7),
@@ -39,7 +36,7 @@ class DetailPage extends StatelessWidget {
             ),
           );
         },
-        errorBuilder: (context, error, stackTrace) => _getImageNotFound(),
+        errorWidget: (context, url, error) => _getImageNotFound(),
       ),
     );
   }

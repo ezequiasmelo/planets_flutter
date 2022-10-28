@@ -1,4 +1,4 @@
-# PLANETS FLUTTER
+# Planets Flutter
 
 A new Flutter project.
 
@@ -18,4 +18,9 @@ samples, guidance on mobile development, and a full API reference.
 ### repo tutorial
 ```
     https://github.com/sergiandreplace/flutter_planets_tutorial
+```
+
+### packages
+```
+    cached_network_image
 ```
