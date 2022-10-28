@@ -16,11 +16,11 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 ### repo tutorial
-```
-    https://github.com/sergiandreplace/flutter_planets_tutorial
-```
+- [flutter planets tutorial by sergiandreplace](https://github.com/sergiandreplace/flutter_planets_tutorial)
 
-### packages
+<br>
+
+### Packages
 ```
     cached_network_image
 ```
