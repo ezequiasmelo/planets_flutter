@@ -28,5 +28,7 @@ samples, guidance on mobile development, and a full API reference.
 ### Preview
 <br>
 <div align="center">
-    <img src="screens/preview.gif" width="250"/>
+    <img src="screens/preview-home.png" width="180"/>
+    <img src="screens/preview-details.png" width="180"/>
+    <img src="screens/preview-gif.gif" width="180"/>
 </div>
