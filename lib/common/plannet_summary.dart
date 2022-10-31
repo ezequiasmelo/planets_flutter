@@ -7,10 +7,13 @@ import 'package:planets/common/text_style.dart';
 class PlanetSummary extends StatelessWidget {
   final Planet planet;
   final bool horizontal;
+  final int index;
 
-  PlanetSummary(this.planet, {this.horizontal = true});
+  const PlanetSummary(this.planet, this.index,
+      {super.key, this.horizontal = true});
 
-  PlanetSummary.vertical(this.planet) : horizontal = false;
+  const PlanetSummary.vertical(this.planet, this.index, {super.key})
+      : horizontal = false;
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +99,7 @@ class PlanetSummary extends StatelessWidget {
         onTap: horizontal
             ? () => Navigator.of(context).push(
                   PageRouteBuilder(
-                    pageBuilder: (_, __, ___) => DetailPage(planet),
+                    pageBuilder: (_, __, ___) => DetailPage(planet, index),
                     transitionsBuilder:
                         (context, animation, secondaryAnimation, child) =>
                             FadeTransition(opacity: animation, child: child),

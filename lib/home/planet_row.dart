@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:planets/common/text_style.dart';
 import 'package:planets/detail/detail_page.dart';
@@ -6,8 +5,9 @@ import 'package:planets/model/planets.dart';
 
 class PlanetRow extends StatelessWidget {
   late final Planet? planet;
+  late final int index;
 
-  PlanetRow(this.planet);
+  PlanetRow(this.planet, this.index, {super.key});
 
   late final planetThumbnail = Container(
     margin: EdgeInsets.symmetric(
@@ -123,7 +123,7 @@ class PlanetRow extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.of(context).push(
         PageRouteBuilder(
-          pageBuilder: (_, __, ___) => DetailPage(planet!),
+          pageBuilder: (_, __, ___) => DetailPage(planet!, index),
         ),
       ),
       child: Container(

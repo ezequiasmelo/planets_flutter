@@ -18,7 +18,7 @@ class HomePageBody extends StatelessWidget {
               sliver: SliverFixedExtentList(
                 itemExtent: 152.0,
                 delegate: SliverChildBuilderDelegate(
-                  (context, index) => PlanetRow(planets[index]),
+                  (context, index) => PlanetRow(planets[index], index),
                   childCount: planets.length,
                 ),
               ),
