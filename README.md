@@ -16,11 +16,17 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 ### repo tutorial
+
 - [flutter planets tutorial by sergiandreplace](https://github.com/sergiandreplace/flutter_planets_tutorial)
 
 <br>
 
 ### Packages
-```
-    cached_network_image
-```
+
+- [Cached network image](https://pub.dev/packages/cached_network_image)
+
+### Preview
+<br>
+<div align="center">
+    <img src="screens/preview.gif" width="250"/>
+</div>
