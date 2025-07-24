@@ -1,10 +1,8 @@
 # Planets Flutter
 
-### repo tutorial
+### Repo tutorial
 
 - [flutter planets tutorial by sergiandreplace](https://github.com/sergiandreplace/flutter_planets_tutorial)
-
-<br>
 
 ### Packages
 
